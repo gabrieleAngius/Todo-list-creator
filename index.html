@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<title>To-do list creator</title>
+		<!--meta tags-->
+	    <meta charset="UTF-8" />
+        <meta name="description" content="Crea in modo semplice e veloce la tua lista delle cose da fare!" />
+        <meta name="keywords" content="To-do, Todo list" />
+	    <meta name="author" content="Gabriele Angius" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <!--font-->
+	    <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Quicksand:wght@400;700&family=Trykker&display=swap" rel="stylesheet" />
+	    <!--incone-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	    <!--foglio di stile-->
+	    <link href="stile.css" rel="stylesheet" />
+		<style></style>
+	</head>
+	<body>
+		<h1 class="display">To-do list creator</h1>
+		<section>
+			<form class="input">
+			<input id="newInput" type="text" placeholder="Digita qualcosa da fare...">
+				<button id="newTodo">+</button>
+			</input>
+			</form>
+		</section>
+		
+		<section class="todos">
+			<div>
+				<h2>Da fare</h2>
+				<p id="tooltip1">Nessun todo in corso. Creane uno per aggiungerlo a questo gruppo !</p>
+				<ul class="todo"></ul>
+			</div>
+			<div id="line"> </div>
+			<div>
+				<h2>Svolti</h2>
+				<p id="tooltip2">Nessun todo svolto. Contrassegna uno di quelli in corso per spostarlo qui !</p>
+				<ul class="todo svolti"></ul>
+			</div>
+		</section>
+		
+		<section class="overlay hide" id="modalDel">
+			<div>
+				<h2>Sei sicuro?</h2>
+				<p>Stai per eliminare <b>1 elemento.</b> Gli elementi eliminati non possono essere ripristinati.</p>
+				<span class="double">
+					<button class="generic primary">Conferma</button>
+					<button class="generic secondary">Annulla</button>
+				</span>
+			</div>
+		</section>
+		<section class="overlay hide" id="modalNoInput">
+			<div>
+				<h2>Attenzione!</h2>
+				<p>Non è stato inserito niente nel campo di imput. Digita qualcosa per creare un nuovo elemento.</p>
+				<span class="single">
+					<button class="generic">Ho capito</button>
+				</span>
+			</div>
+		</section>
+		<section class="overlay hide" id="modalWelcome">
+			<div>
+				<h2>Benvenuto!</h2>
+				<p> Crea in modo facile e veloce una tua lista delle cose da fare:</p>
+				<p><ul>
+					<li><strong>Crea un nuovo todo:</strong> Digita qualcosa nel campo di imput e premi invio o il bottone <b>+</b></li>
+					<li><strong>Contrassegna come svolto:</strong> Premi sul bottone con l'icona check <i class="fa fa-check"></i> </li>
+					<li><strong>Elimina un todo:</strong> Premi sul pulsante con l'icona del cestino <i class="fa fa-trash"></i> </li>
+				</ul></p>
+				<p>Semplice no?</p>
+				<p> <strong>Tutti i tuoi dati verranno salvati in locale</strong>, perciò li ritroverai sempre lì quando avvierai una nuova sessione o ricaricherai la pagina!</p>
+				<span class="single">
+					<button class="generic primary">Iniziamo!</button>
+				</span>
+			</div>
+		</section>
+		<footer>
+            <div>
+                <img src="https://gabrieleangius.netlify.app/imgs/logo/logoMinimBlack.svg" alt="Logo Gabriele Angius">
+                <p class="italic">Creatività, formazione e innovazione. <br/> Passo dopo passo, non si smette mai di migliorare.</p>
+                <p class="small">Ideato, progettato e sviluppato da <a href="https://gabrieleangius.netlify.app/index.html" target="_blank">Gabriele Angius</a> <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /></p>
+            </div>
+        </footer>
+	</body>
+	<script src="script.js"></script>
+</html>
